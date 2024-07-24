@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM Test Suite]">
+  <test thread-count="5" name="Admin Login Test with valid data(failed)">
+    <parameter name="adminpwd" value="Qedge123!@#"/>
+    <parameter name="adminuid" value="Admin"/>
+    <classes>
+      <class name="oragehrm.testcases.AdminLoginTestwithValidCredentials">
+        <methods>
+          <include name="checkAdminLogin" invocation-numbers="0"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.AdminLoginTestwithValidCredentials -->
+    </classes>
+  </test> <!-- Admin Login Test with valid data(failed) -->
+  <test thread-count="5" name="Admin Login Test with invalid data(failed)">
+    <parameter name="uid" value="abc"/>
+    <parameter name="pwd" value="xyz"/>
+    <classes>
+      <class name="oragehrm.testcases.AdminLoginTestwithInvalidCredentials">
+        <methods>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+          <include name="checkAdminLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.AdminLoginTestwithInvalidCredentials -->
+    </classes>
+  </test> <!-- Admin Login Test with invalid data(failed) -->
+  <test thread-count="5" name="New Employee Registration Test(failed)">
+    <parameter name="fname" value="Raju"/>
+    <parameter name="lname" value="Demo3"/>
+    <classes>
+      <class name="oragehrm.testcases.EmployeeRegTest">
+        <methods>
+          <include name="checkEmpReg"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+          <include name="adminLogin"/>
+          <include name="adminLogout"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.EmployeeRegTest -->
+    </classes>
+  </test> <!-- New Employee Registration Test(failed) -->
+  <test thread-count="5" name="New User Registration Test(failed)">
+    <parameter name="empname" value="Raju Demo3"/>
+    <parameter name="role" value="ESS"/>
+    <parameter name="uname" value="Raju123456"/>
+    <parameter name="pword" value="Qedge123!@#"/>
+    <classes>
+      <class name="oragehrm.testcases.UserRegTest">
+        <methods>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+          <include name="adminLogin"/>
+          <include name="checkUserReg"/>
+          <include name="adminLogout"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.UserRegTest -->
+    </classes>
+  </test> <!-- New User Registration Test(failed) -->
+  <test thread-count="5" name="Employee Login Test(failed)">
+    <parameter name="empuid" value="Raju123456"/>
+    <parameter name="emppwd" value="Qedge123!@#"/>
+    <classes>
+      <class name="oragehrm.testcases.EmpLoginTest">
+        <methods>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+          <include name="checkEmpLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.EmpLoginTest -->
+    </classes>
+  </test> <!-- Employee Login Test(failed) -->
+</suite> <!-- Failed suite [OrangeHRM Test Suite] -->

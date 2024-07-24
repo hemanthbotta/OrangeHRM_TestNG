@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM Test Suite]">
+  <test thread-count="5" name="Admin Login Test with valid data(failed)">
+    <parameter name="adminpwd" value="Qedge123!@#"/>
+    <parameter name="adminuid" value="Admin"/>
+    <classes>
+      <class name="oragehrm.testcases.AdminLoginTestwithValidCredentials">
+        <methods>
+          <include name="checkAdminLogin" invocation-numbers="0"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- oragehrm.testcases.AdminLoginTestwithValidCredentials -->
+    </classes>
+  </test> <!-- Admin Login Test with valid data(failed) -->
+</suite> <!-- Failed suite [OrangeHRM Test Suite] -->

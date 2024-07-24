@@ -1,0 +1,46 @@
+<suite name="OrangeHRM Test Suite">
+  
+
+	<test name="Admin Login Test with valid data">
+	<parameter name="adminuid" value="Admin"></parameter>
+	<parameter name="adminpwd" value="Qedge123!@#"></parameter>
+		<classes>
+			<class name="oragehrm.testcases.AdminLoginTestwithValidCredentials"></class>
+		</classes>	
+	</test>
+
+	<test name="Admin Login Test with invalid data">
+	<parameter name="uid" value="abc"></parameter>
+	<parameter name="pwd" value="xyz"></parameter>
+		<classes>
+			<class name="oragehrm.testcases.AdminLoginTestwithInvalidCredentials"></class>
+		</classes>		
+	</test>
+	
+	<test name="New Employee Registration Test">
+	<parameter name="fname" value="Raju"></parameter>
+	<parameter name="lname" value="DemoX"></parameter>
+		<classes>
+			<class name="oragehrm.testcases.EmployeeRegTest"></class>
+		</classes>
+	</test>
+	
+	<test name="New User Registration Test">
+	<parameter name="role" value="ESS"></parameter>
+	<parameter name="empname" value="Raju DemoX"></parameter>
+	<parameter name="uname" value="RajuD123456"></parameter>
+	<parameter name="pword" value="Qedge123!@#"></parameter>
+		<classes>
+			<class name="oragehrm.testcases.UserRegTest"></class>
+		</classes>		
+	</test>
+	
+-->	
+	<test name="Employee Login Test">
+	<parameter name="empuid" value="RajuD123456"></parameter>	
+	<parameter name="emppwd" value="Qedge123!@#"></parameter>
+		<classes>
+			<class name="oragehrm.testcases.EmpLoginTest"></class>
+		</classes>
+	</test>
+</suite>
